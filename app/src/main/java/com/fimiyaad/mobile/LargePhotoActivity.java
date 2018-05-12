@@ -16,6 +16,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -153,7 +154,9 @@ public class LargePhotoActivity extends AppCompatActivity {
          * fragment.
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
-        private int pos, mPadding = 15;;
+        private int pos;
+        //padding to remove image border
+        private int mPadding = 15;
 
         public PlaceholderFragment() {}
 
@@ -193,13 +196,21 @@ public class LargePhotoActivity extends AppCompatActivity {
 
                     FrameLayout.LayoutParams layoutParams;
 
-                    if (getResources().getConfiguration().orientation == 1) {
-                        layoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+
+
+                    if(getResources().getConfiguration().orientation == 1) {
+                        if(bitmap.getHeight() > bitmap.getWidth()) {
+                            //w h
+                            layoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.MATCH_PARENT, Gravity.CENTER);
+                        } else {
+                            layoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT, Gravity.CENTER);
+                        }
                     } else {
-                        layoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.MATCH_PARENT);
+                        layoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.MATCH_PARENT, Gravity.CENTER);
                     }
 
-                    layoutParams.gravity = Gravity.CENTER;
+                    imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+                    imageView.setAdjustViewBounds(true);
                     imageView.setLayoutParams(layoutParams);
                     imageView.setImageBitmap(crop);
 

@@ -47,7 +47,7 @@ public class AlbumActivity extends AppCompatActivity {
         //toolbar.setTitle(GALLERY_TITLE);
         setSupportActionBar(toolbar);
 
-        //if(getSupportActionBar()!=null) getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if(getSupportActionBar()!=null) getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //ImageView photo = findViewById(R.id.gallery_photo);
         //photo.setImageBitmap(GALLERY_PIC);

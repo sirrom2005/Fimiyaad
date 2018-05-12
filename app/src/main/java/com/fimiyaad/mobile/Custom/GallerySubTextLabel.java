@@ -26,7 +26,7 @@ public class GallerySubTextLabel extends android.support.v7.widget.AppCompatText
     }
 
     private void Setup() {
-        Typeface face = Typeface.createFromAsset(getResources().getAssets(),"fonts/Roboto-Medium.ttf");
+        Typeface face = Typeface.createFromAsset(getResources().getAssets(),"fonts/NotoSerif-Regular.ttf");
         this.setTypeface(face);
     }
 }

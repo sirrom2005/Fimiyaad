@@ -66,7 +66,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHold
             }
         });
 
-        holder.vView.setOnClickListener(new View.OnClickListener() {
+        holder.vImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(mActivity, holder.vImage, "photo_transition");
@@ -93,13 +93,11 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ViewHold
     class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView vImage;
         private TextView vTitle;
-        private RelativeLayout vView;
 
         private ViewHolder(View v){
             super(v);
             vImage = v.findViewById(R.id.image);
             vTitle = v.findViewById(R.id.title);
-            vView =  v.findViewById(R.id.view);
         }
     }
 }
