@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/colorBackground"
+tools:context="com.fimiyaad.mobile.GalleryActivity">
+
+<include layout="@layout/tool_bar"/>
+
+<include layout="@layout/banner_add"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:layout_below="@+id/toolbar"
+   android:layout_centerHorizontal="true"/>
+
+<FrameLayout
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/adView"/>
+
+  <ProgressBar
+      android:id="@+id/progressBar"
+      android:visibility="gone"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:layout_centerVertical="true"/>
+</RelativeLayout>

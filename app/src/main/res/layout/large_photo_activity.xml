@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/banner_add"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:layout_below="@id/adView"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/gallery_btn_strip">
+        <Button
+            android:text="@string/save"
+            android:id="@+id/save"
+            style="@style/gallery_btn"/>
+        <!--Button
+            android:text="(100) Like"
+            style="@style/gallery_btn"/>
+        <Button
+            android:text="Comment"
+            style="@style/gallery_btn"/-->
+        <TextView
+            android:id="@+id/gallery_text"
+            style="@style/gallery_btn"/>
+        <Button
+            android:text="@string/share"
+            android:id="@+id/share"
+            style="@style/gallery_btn"/>
+    </LinearLayout>
+
+</RelativeLayout>

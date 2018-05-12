@@ -1,0 +1,25 @@
+<resources>
+  <string translatable="false" name="app_name">Fimiyaad</string>
+  <string translatable="false" name="application_id">com.fimiyaad.mobile</string>
+  <string translatable="false" name="file_provider">com.fimiyaad.mobile.fileprovider</string>
+  <string translatable="false" name="ADMOB_APP_ID">ca-app-pub-9222115009045453~2213209656</string>
+  <string translatable="false" name="bbanner_id">ca-app-pub-9222115009045453/5524347824</string>
+  <string translatable="false" name="short_url_api_key">AIzaSyAekWdrXbQv3S2ecvBf8dYtbntbZ2p-Ohg</string>
+  <string name="about_us">About</string>
+  <string name="gallery">Gallery</string>
+  <string name="events">Events</string>
+  <string name="videos">Videos</string>
+  <string name="ja">Jamaica</string>
+  <string name="usa">U.S.A.</string>
+  <string name="uk">U.K.</string>
+  <string name="banner">BANNER</string>
+  <string name="banner_id">ca-app-pub-9222115009045453/5524347824</string>
+  <string name="banner_test_id">ca-app-pub-3940256099942544/6300978111</string>
+  <string name="save">Save</string>
+  <string name="share">Share</string>
+  <string name="share_photo">Check out this photo from fimiyaad.com\n%1$s</string>
+  <string name="send_to">Send to…</string>
+  <string name="download_photo" >Downloading photo to device</string>
+  <string name="versionName">Version 2</string>
+  <string name="no_internet">No internet connection, check your data or Wi-Fi connection.</string>
+</resources>
